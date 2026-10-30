@@ -1,5 +1,7 @@
 # dsh-web-fetch-fakeip
 
+English | [中文](README.zh.md)
+
 A DeepSeek Harness bundle that makes `web_fetch` work behind a DNS **fake-ip**
 implementation (Clash, sing-box, Surge, …).
 
