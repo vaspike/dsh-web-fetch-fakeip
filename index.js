@@ -1,5 +1,5 @@
 /**
- * `@local/dsh-web-fetch-fakeip`: a second `ctx.web` fetch provider that tolerates
+ * `dsh-web-fetch-fakeip`: a second `ctx.web` fetch provider that tolerates
  * locally-mapped DNS answers (fake-ip) instead of rejecting them.
  *
  * The shipped `@deepseek-ai/dsh-web-fetch-http` provider rejects a hostname when
@@ -17,7 +17,7 @@
  * bundle cannot resolve the runtime's `@deepseek-ai/*` packages (the registry
  * copies are published at 0.0.1-rc.x, far behind the running kernel).
  *
- * @module @local/dsh-web-fetch-fakeip
+ * @module dsh-web-fetch-fakeip
  */
 
 import { lookup } from 'node:dns/promises'

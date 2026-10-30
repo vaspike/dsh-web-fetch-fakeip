@@ -1,4 +1,4 @@
-# @local/dsh-web-fetch-fakeip
+# dsh-web-fetch-fakeip
 
 A DeepSeek Harness bundle that makes `web_fetch` work behind a DNS **fake-ip**
 implementation (Clash, sing-box, Surge, …).
@@ -19,12 +19,18 @@ RFC 1918, link-local, CGNAT and the other reserved blocks stay blocked.
 
 ## Install
 
-Install the package directory as a bundle in the profile you use, for example with
-the `plugin_manager` tool:
+```sh
+dsh plugin --profile <your-profile> add https://github.com/vaspike/dsh-web-fetch-fakeip
+```
+
+Or, from a local checkout, point `plugin_manager` at the directory:
 
 ```
-plugin_manager action=install_bundle target=/Users/river/code/zyz/dsh-fakeip-plugin
+plugin_manager action=install_bundle target=/path/to/dsh-web-fetch-fakeip
 ```
+
+A bundle is a package whose `package.json` declares `dsh.bundle.patch`, so the patch
+below is applied when the bundle is selected for the profile.
 
 The bundle patch does two things:
 
@@ -40,7 +46,7 @@ should win — the user layer (`cordis.patch.yml`) is applied after bundles.
 
 ```yaml
 - id: web-fetch-fakeip
-  name: '@local/dsh-web-fetch-fakeip'
+  name: 'dsh-web-fetch-fakeip'
   config:
     allowCidrs:
       - 198.18.0.0/15   # Clash / sing-box / Surge fake-ip default
