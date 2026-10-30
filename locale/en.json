@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fake-IP Web Fetch",
+    "description": "Adds a web fetch provider that accepts locally-mapped DNS ranges such as 198.18.0.0/15, so web_fetch works behind Clash, sing-box or Surge fake-ip."
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fake-IP 网页抓取",
+    "description": "提供一个能接受本地映射 DNS 网段（如 198.18.0.0/15）的网页抓取 provider，让 web_fetch 在 Clash、sing-box、Surge 等 fake-ip 模式下正常工作。"
+  }
+}

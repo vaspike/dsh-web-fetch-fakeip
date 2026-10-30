@@ -1,0 +1,42 @@
+{
+  "name": "dsh-web-fetch-fakeip",
+  "version": "0.1.0",
+  "description": "Web fetch provider for DeepSeek Harness that accepts locally-mapped DNS ranges such as 198.18.0.0/15, so web_fetch works behind Clash, sing-box or Surge fake-ip.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "web-fetch",
+    "fake-ip"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaspike/dsh-web-fetch-fakeip.git"
+  },
+  "homepage": "https://github.com/vaspike/dsh-web-fetch-fakeip#readme",
+  "exports": {
+    ".": "./index.js",
+    "./lib/*.js": "./lib/*.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/classify.test.js"
+  }
+}

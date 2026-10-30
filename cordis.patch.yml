@@ -1,0 +1,19 @@
+# Bundle patch for dsh-web-fetch-fakeip.
+#
+# 1. Pin the web seam to the fake-ip tolerant provider. A compensating override
+#    replaces the complete `web` config, so it repeats the shipped
+#    `searchProvider` value; keep both keys if you customize either one later.
+#    A user-layer cordis.patch.yml is applied after bundles, so it still wins.
+# 2. Insert the provider row itself.
+- id: web
+  name: '@deepseek-ai/dsh-web'
+  config:
+    searchProvider: deepseek-official
+    fetchProvider: http-fakeip
+
+- insert:
+    - id: web-fetch-fakeip
+      name: dsh-web-fetch-fakeip
+      config:
+        allowCidrs:
+          - 198.18.0.0/15
